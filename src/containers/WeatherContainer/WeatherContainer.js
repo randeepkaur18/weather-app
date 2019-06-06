@@ -19,7 +19,6 @@ class WeatherContainer extends Component {
     // It will execute after the creation is finished for the component
     componentDidMount() {
         this.getWeather(defaultValues.location, defaultValues.countryCode);
-        // document.getElementById('searchBar').value = defaultValues.location;
     }
 
     // Gets the value from the search input field and calls the Weather API
@@ -36,7 +35,7 @@ class WeatherContainer extends Component {
             })
             .then(weatherData => {
                 this.setState({ weatherData });
-                document.getElementById('searchBar').value = defaultValues.location;
+                document.getElementById('searchBar').value = location;
             })
             .catch(error => {
                 console.log(error);
@@ -67,8 +66,6 @@ class WeatherContainer extends Component {
                     return date === data['dt_txt'].split(' ')[0].toString()
                 })
                 weatherForDays.push(weatherForDay);
-                console.log(weatherForDays);
-
             })
 
             showWeather = (
@@ -93,8 +90,6 @@ class WeatherContainer extends Component {
                 </div>
             );
         }
-        //    console.log(this.state.weatherData);
-
 
         return showWeather;
     }

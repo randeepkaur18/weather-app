@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import App from './App';
+import Layout from './components/Layout/Layout';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+it('render <Layout> component without crashing', () => {
+  const appWrapper = shallow(<App />);
+  expect(appWrapper.contains(<Layout />)).toBe(true);
 });

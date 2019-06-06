@@ -5,7 +5,7 @@ import './Header.css';
 const header = (props) => {
     return (
         <header className="header">
-            WEATHER CHANNEL
+            WEATHER APP
         </header>
     );
 }

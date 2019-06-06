@@ -11,7 +11,7 @@ const weatherDetails = (props) => {
                 if(props.weatherData.list.length === 1) {
                     return null;
                 }
-                if(index < 4) {
+                else if(index < 4) {
                     return (
                         <div key={item.dt_txt} className="weatherDetail">
                             {/* <div className="weatherDetail-row"> */}
@@ -22,7 +22,6 @@ const weatherDetails = (props) => {
                         </div>
                     )
                 }
-                
             })}
         </div>
     );
