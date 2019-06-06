@@ -1,0 +1,24 @@
+.weatherContainer {
+    height: 90%;
+    width: 70%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027); */
+    padding: 20px 30px;
+    color: white;
+    border-radius: 10px !important;
+    background-image: url('../../assets/images/bgImg_1.png');
+    background-size: cover;
+}
+
+.weatherContainer1 {
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.weatherContainer2 {
+    height: 40%;
+}

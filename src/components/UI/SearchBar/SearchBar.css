@@ -1,0 +1,46 @@
+.searchBar {
+    padding: 6px;
+    /* display: flex;
+    justify-content: ;
+    align-items: center; */
+    box-sizing: border-box;
+    background: white;
+    border-radius: 100px;
+    width: 80%;
+}
+
+.searchBar input {
+    border: none;
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+
+.searchBar input:focus {
+    outline: none !important;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { display: none; }
+
+
+.searchBar .searchIcon {
+    float: right;
+    padding-right: 5px;
+    color: black;
+}
+
+.searchBar .searchIcon:hover {
+    cursor: pointer;
+}
+
+.searchBar .mapIcon {
+    color: black;
+}
+
+@media (max-width: 1000px) {
+    .searchBar {
+        width: 45%;
+    }
+}

@@ -1,0 +1,35 @@
+.weatherData {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1%;
+}
+
+.weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20%;
+}
+
+.weather .icon {
+    font-size: 80px !important;
+}
+
+.weather .temperature {
+    font-size: 60px !important;
+}
+
+.data {
+    font-size: 20px !important;
+    text-transform: capitalize;
+}
+
+.details {
+    padding-top: 5%;
+    font-size: 14px !important;
+}
+
+.date {
+    font-size: 20px !important;
+    padding-top: 7%;
+}

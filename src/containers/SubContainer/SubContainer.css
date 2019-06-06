@@ -1,0 +1,36 @@
+.subContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #a7a8aa;
+    padding-top: 1%;
+    height: 100%;
+}
+
+.subContainer .subContainer-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    background: none;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    height: 100%;
+    font-size: 15px;
+}
+
+.subContainer .subContainer-card:hover {
+    /* Add the blur effect */
+  /* filter: blur(20px);
+  -webkit-filter: blur(8px);
+  color: white; */
+  background: #CFD6E6;
+  color: black;
+}
+
+.icon {
+    font-size: 40px !important;
+}
