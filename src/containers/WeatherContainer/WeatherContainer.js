@@ -13,10 +13,11 @@ const defaultValues = {
 
 class WeatherContainer extends Component {
     state = {
-        weatherData: null
+        weatherData: null,
+        error: false
     }
 
-    // It will execute after the creation is finished for the component
+    // It will execute after the creation is finished for the component.
     componentDidMount() {
         this.getWeather(defaultValues.location, defaultValues.countryCode);
     }
@@ -34,18 +35,24 @@ class WeatherContainer extends Component {
                 return response.json();
             })
             .then(weatherData => {
+                console.log(weatherData)
+                if(weatherData.cod === '404') {
+                    this.setState({ error: true});
+                }
                 this.setState({ weatherData });
                 document.getElementById('searchBar').value = location;
             })
             .catch(error => {
                 console.log(error);
+                this.setState({ error: true });
             });
     }
 
     render() {
         let showWeather = null;
         let weatherForDays = [];
-        if (this.state.weatherData) {
+        console.log(this.state.weatherData)
+        if (this.state.weatherData && this.state.weatherData.city) {
             let distinctDate = [];
             let weatherForDay = {};
 
@@ -83,6 +90,18 @@ class WeatherContainer extends Component {
             )
 
         }
+        else if (this.state.error) {
+            showWeather = (
+                <div className="ui-card weatherContainer">
+                    <div className="weatherContainer1">
+                        <WeatherData getWeatherByLocation={this.getWeatherByLocation}
+                            weatherData={weatherForDays[0]}
+                            cityNotFound
+                        />
+                    </div>
+                </div>
+            );
+        }
         else {
             showWeather = (
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -90,6 +109,7 @@ class WeatherContainer extends Component {
                 </div>
             );
         }
+        // console.log(this.state.weatherData.cod.value);
 
         return showWeather;
     }

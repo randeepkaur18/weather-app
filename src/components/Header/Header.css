@@ -5,8 +5,10 @@
     top: 0;
     left: 0;
     /* background-color: #353a3d; */
-    background-color: #2E3E50;
-    color: white;
+    background: #CFD6E6;
+    /* background: rgb(122, 129, 143); */
+    /* background: #2E3E50; */
+    color: #353a3d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,4 +17,10 @@
     z-index: 90;
     font-size: 20px;
     font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    /* .header {
+        box-shadow:3px 3px 5px 6px #ccc;
+    } */
 }

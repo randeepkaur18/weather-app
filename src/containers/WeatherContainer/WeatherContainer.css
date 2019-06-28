@@ -9,8 +9,8 @@
     padding: 20px 30px;
     color: white;
     border-radius: 10px !important;
-    background-image: url('../../assets/images/bgImg_1.png');
-    background-size: cover;
+    background: black;
+    opacity: 0.5;
 }
 
 .weatherContainer1 {
@@ -21,4 +21,22 @@
 
 .weatherContainer2 {
     height: 40%;
+}
+
+@media (max-width: 700px) {
+    .weatherContainer {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 !important;
+    }
+    
+    .weatherContainer1 {
+        width: 100%;
+        height: 52% !important;
+        flex-direction: column;
+    }
+
+    .weatherContainer2 {
+        height: 48% !important;
+    }
 }

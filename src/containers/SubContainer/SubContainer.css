@@ -23,14 +23,48 @@
 }
 
 .subContainer .subContainer-card:hover {
-    /* Add the blur effect */
-  /* filter: blur(20px);
-  -webkit-filter: blur(8px);
-  color: white; */
   background: #CFD6E6;
   color: black;
+  font-weight: bold;
 }
 
-.icon {
+.subcontainer-icon {
     font-size: 40px !important;
+}
+
+@media (min-width: 700px) and (max-width: 950px) {
+    .weatherDetail {
+        font-size: 14px !important;
+    }
+
+    .subContainer .subContainer-card {
+        font-size: 13px !important;
+        padding-right: 0px !important;
+        padding-left: 0 !important;
+    }
+
+    .subcontainer-icon {
+        font-size: 28px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .subContainer {
+        flex-direction: column;
+    }
+
+    .subContainer .subContainer-card {
+        flex-direction: row;
+        /* height: 200%; */
+        width: 100%;
+        font-size: 13px;
+        justify-content: space-evenly;
+        padding: 3% !important;
+        padding-right: 0px !important;
+        padding-left: 0 !important;
+    }
+
+    .subcontainer-icon {
+        font-size: 28px !important;
+    }
 }
